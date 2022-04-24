@@ -1,0 +1,31 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" controller="PostLinkedin" access="global" >
+    <aura:attribute name="body" type="String"/>
+    
+    <lightning:card footer="" title="Linkedin">
+        <div class="slds-box slds-box_small ">
+            <lightning:layout>
+                <lightning:layoutItem size="12">
+                    <lightning:input name="input" value="{! v.body }" placeholder="digite seus pensamentos..." label="Nova Publicação no Linkedin" />
+                </lightning:layoutItem>           
+            </lightning:layout>
+            <lightning:layout class="slds-m-top_large right-align">
+                <lightning:layoutItem size="12">
+                    <lightning:button variant="Neutral" 
+                                      label="Postar" 
+                                      onclick="{!c.handleClick}" 
+                                      class="slds-m-left_x-small">
+                    </lightning:button>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </div>
+    </lightning:card>
+     <lightning:card  title="Publicações">
+        <div class="slds-box slds-box_small ">
+            <lightning:layout>
+                <lightning:layoutItem size="8" class="center-align">
+                    <p>{! v.body }</p>
+                </lightning:layoutItem>           
+            </lightning:layout>
+        </div>
+      </lightning:card>
+</aura:component>

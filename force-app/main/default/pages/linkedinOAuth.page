@@ -1,0 +1,5 @@
+<apex:page standardStylesheets="false" showHeader="false" controller="linkedinOAuth" action="{!registerCode}">
+    <p>
+        Autorizando...
+    </p>
+</apex:page>
