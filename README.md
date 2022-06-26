@@ -1,6 +1,8 @@
 # Integração com o Salesforce
 
 Colando em prática o conhecimento  e estudando ao mesmo tempo, decidi fazer integração do Salesforce com o Linkedin. 
+## 2ª versão: ##
+Adição de botão para autorização e alteração de código. 
 
 ## 1ª versão: ##
 <p>Componente aura : https://github.com/danielfreitasce/integracao-linkedin/tree/main/force-app/main/default/aura</p>
