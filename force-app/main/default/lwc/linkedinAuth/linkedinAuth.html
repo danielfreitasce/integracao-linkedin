@@ -1,0 +1,40 @@
+<template>
+    <div>
+        <div if:true={isExpired}>
+            <lightning-card>
+                <h2 slot="title">
+                    <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+                    Fazer login no Linkedin
+                </h2>
+                <div class="slds-p-horizontal_small">
+
+                    <div data-id="aviso-autorizacao">
+                        <p class="slds-m-bottom_small">
+                            Para autorizar o salesforce a publicar no seu linkedin, aceite os <a href="">termos
+                                e condições</a> e a <a href="">política de privacidade.</a>
+                        </p>
+                        <lightning-button variant="Neutral" label="Discordo" onclick={discordar} title="Descordar">
+                        </lightning-button>
+                        <lightning-button variant="brand" label="Estou de acordo" class="slds-m-left_x-small"
+                            onclick={concordar} title="Concordar">
+                        </lightning-button>
+                    </div>
+
+                    <div data-id="botao-autorizar" class="slds-hide">
+                        <p class="slds-m-bottom_small">Clique em autorizar: </p>
+                        <lightning-button variant="Neutral" label="Cancelar" onclick={cancelar} title="Cancelar">
+                        </lightning-button>
+                        <a href={url} target="_blank">
+                            <lightning-button variant="brand" label="Autorizar" onclick={insertState}
+                                class="slds-m-left_x-small" title="Autorizar">
+                            </lightning-button>
+                        </a>
+                    </div>
+                </div>
+            </lightning-card>
+        </div>
+        <div if:false={isExpired}>
+            <div class="slds-hide"></div>
+        </div>
+    </div>
+</template>
